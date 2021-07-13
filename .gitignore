@@ -1,1 +1,5 @@
 kernel/*.elf
+kernel/html
+kernel/latex
+old
+out

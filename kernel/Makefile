@@ -16,9 +16,9 @@ INCDIR= -I$(BASEDIR)/include/c++/v1 \
 LIBDIR= -L$(BASEDIR)/lib
 CXXFLAGS += $(INCDIR) -O2 -Wall -g \
 --target=x86_64-elf -ffreestanding \
--mno-red-zone -fno-exceptions -fno-rtti -std=c++17
+-mno-red-zone -fno-exceptions -fno-rtti -std=c++20
 LDFLAGS  += $(LIBDIR) --entry KernelMain \
--z norelro --image-base 0x100000 --static
+-z norelro --image-base 0x100000 --static -z separate-code
 
 .PHONY: all
 all: $(TARGET)
